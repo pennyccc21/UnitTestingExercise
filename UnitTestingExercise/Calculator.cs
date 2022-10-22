@@ -18,28 +18,31 @@ namespace UnitTestingExercise
         }
 
 
-        // Step 3: Navigate to the UnitTests.cs file and complete the AddTest unit test method 
-
-
         // Step 4: 
         // Create a Subtract method that accepts 2 integers
-        // Keep track of which number is getting passed as minuend and subtrahend
+        public int subtract(int minued, int subtrhend)
+        {
+            return minued - subtrhend;
 
-
-        // Step 5: Navigate to the UnitTests.cs file and complete the SubtractTest unit test method
+        }
 
 
         // Step 6: 
-        // Create a Multiply method that passes 2 integers
+        // Create a Multiply method that passes 2 intergers
+        public int Multiply(int one, int two)
+        {
+             return one * two;
+        }
 
 
-        // Step 7: Navigate to the UnitTests.cs file and complete the MultiplyTest unit test method 
+        
+        // Create a Divide method that method that passes 2 intergers
+        public int Divide(int one,int two)
+        {
+            return two / one;
+        }
 
-
-        // Step 8: 
-        // Create a Divide method that passes 2 integers
-
-        // Step 9: Navigate to the UnitTests.cs file and complete the DivideTest unit test method 
+       
 
 
         //*****NOW RUN ALL OF YOUR TESTS*********//

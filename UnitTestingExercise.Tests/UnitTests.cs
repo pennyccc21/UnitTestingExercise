@@ -3,65 +3,85 @@ using Xunit;
 
 namespace UnitTestingExercise.Tests
 {
-    public class UnitTests
+    public class UnitTestsMethods
     {
         [Theory]
-        [InlineData(2, 3, 5, 10)] //Add test data <-------
-        public void AddTest(int num1, int num2, int num3, int expected)
+        [InlineData(5,5,5,15)]
+        public void add(int num1, int num2, int num3, int expected)
         {
-            //Start Step 3 here:
-
-            //Arrange
-            // create a Calculator object
+            var test = new UnitTestsMethods();
             
+            var actual = test.Add(num1, num2, num3);
 
-            //Act
-                // call the Add method that is located in the Calculator class
-                // and store its result in a variable named actual
+            Assert.Equal(expected, actual);
 
-            //Assert
-                //Assert.Equal(expected, actual);
+        }
+
+        private object Add(int num1, int num2, int num3)
+        {
+            throw new NotImplementedException();
         }
 
         [Theory]
-        [InlineData()]//Add test data <-------
+        [InlineData(5, 5, 0)]//Add test data <-------
         public void SubtractTest(int minuend, int subtrhend, int expected)
         {
-            //Start Step 5 here:
+            var tester = new UnitTestMethod();
 
-            //Arrange
+            var actual = tester.Subtract(minuend, subtrhend);
 
-            //Act
-
-            //Assert
+            Assert.Equal(expected, actual);
 
         }
 
         [Theory]
-        [InlineData()]//Add test data <-------
-        public void MultiplyTest(int num1, int num2, int expected)
+        [InlineData(2, 2, 4)]
+        [InlineData(5, 4, 20)]
+        public void Multiply(int num1, int num2, int expected)
         {
-            //Start Step 7 here:
+            var test = new UnitTestMethod();
 
-            //Arrange
+            var actual = test.Multiply(num1, num2);
 
-            //Act
-
-            //Assert
+            Assert.Equal(expected, actual);
 
         }
 
+
+
+
         [Theory]
-        [InlineData()]//Add test data <-------
+        [InlineData(20,5,40)] 
         public void DivideTest(int num1, int num2, int expected)
         {
-            //Arrange
+            var tester = new UnitTestsMethods();
 
-            //Act
+            var actual = tester.Divide(num1, num2);
 
-            //Assert
+            Assert.Equal(expected, actual);
 
         }
 
+        private object Divide(int num1, int num2)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    internal class UnitTestMethod
+    {
+        public UnitTestMethod()
+        {
+        }
+
+        internal object Multiply(int num1, int num2)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal object Subtract(int minuend, int subtrhend)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
